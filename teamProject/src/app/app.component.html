@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-header 
+  class="header"></app-header>
+<app-sliderbar 
+  class="slider"
+  (ifSliderOpen)="sliderToggle($event)"
+  [ngClass]={active:sliderOpen}></app-sliderbar>
+<div 
+  class="contentDiv"
+  [ngClass]={active:sliderOpen}>
+  <router-outlet></router-outlet>
+</div>
